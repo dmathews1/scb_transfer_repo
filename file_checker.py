@@ -9,6 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-p','--path',dest='base_path', action='store', default = None)
 parser.add_argument('-s','--source_system', dest='source_system', action='store', default = False)
 parser.add_argument('-c','--country', dest='country', action='store', default = False)
+parser.add_argument('-d','--database', dest='database', action='store', default = False)
 args = parser.parse_args()
 
 full_path = "{}/{}/{}/status".format(args.base_path, args.source_system, args.country)
@@ -18,14 +19,13 @@ if len(files) == 0:
     print("failure noted at a global level, not continuing")
     exit(1)
 
-#print(files)
+dbs = [ x for x in args.database.split(",") if x ]
 
 ## grab tables
 
 table_path = "{}/{}/{}/configs".format(args.base_path, args.source_system, args.country)
 tableslist = [ x for x in os.listdir(table_path) if re.search(r'\.*{}*'.format(args.source_system), x) and re.search(r'\.*{}*'.format(args.country), x) and x.endswith(".xml") ]  
 tables = [ "_".join(x.split("_")[2:-2]) for x in tableslist ]
-#print(tables)
 
 if len(tables) < 0:
     print("no tables found")
@@ -45,6 +45,10 @@ if os.path.exists(check_fail_path):
 else:
     print("no failed tables")
 
-#print("FINAL TABLE LIST")
-print("\n".join(tables))
+db_tables = []
+for database in dbs:
+    db_tables.append([ "{}.{}".format(database, x) for x in tables ])
+db_tables = [x for y in db_tables for x in y]
+
+print("\n".join(db_tables))
 

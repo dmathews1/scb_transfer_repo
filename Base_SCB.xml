@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>2085f647-017d-1000-ffff-fffff1dbeec7</groupId>
-    <name>SCB_Base</name>
+    <name>SCB_Base_with_Hive</name>
     <snippet>
         <connections>
             <id>235cb74d-e03f-358c-0000-000000000000</id>
@@ -25,6 +25,31 @@
             <source>
                 <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
                 <id>023c5d2c-f4a5-3d57-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>3ba7085c-b7cf-3aaf-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>4f2bd8dc-d9c7-3d07-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>4bfcb92f-1486-362b-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -106,6 +131,31 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
+            <id>62a42e94-9fd5-3c09-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>a07754d0-9821-3908-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>4bfcb92f-1486-362b-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
             <id>6eee44b8-c28a-342d-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -151,31 +201,6 @@
             <source>
                 <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
                 <id>8494b873-005f-33d9-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>b9ca24ae-fdb6-3a9c-0000-000000000000</id>
-            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
-                <id>9a5701fb-82e5-3b4e-0000-000000000000</id>
-                <type>FUNNEL</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>splits</selectedRelationships>
-            <source>
-                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
-                <id>204cf29a-8972-3c19-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -230,19 +255,164 @@
             </source>
             <zIndex>0</zIndex>
         </connections>
+        <connections>
+            <id>df6cf494-67ed-3852-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>4bfcb92f-1486-362b-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>splits</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>204cf29a-8972-3c19-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <controllerServices>
+            <id>5364b729-9347-3437-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <bundle>
+                <artifact>nifi-hive3-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0.3.3.1.0-10</version>
+            </bundle>
+            <comments></comments>
+            <descriptors>
+                <entry>
+                    <key>hive-db-connect-url</key>
+                    <value>
+                        <name>hive-db-connect-url</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>hive-config-resources</key>
+                    <value>
+                        <name>hive-config-resources</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>hive-db-user</key>
+                    <value>
+                        <name>hive-db-user</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>hive-db-password</key>
+                    <value>
+                        <name>hive-db-password</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>hive-max-wait-time</key>
+                    <value>
+                        <name>hive-max-wait-time</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>hive-max-total-connections</key>
+                    <value>
+                        <name>hive-max-total-connections</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Validation-query</key>
+                    <value>
+                        <name>Validation-query</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>kerberos-credentials-service</key>
+                    <value>
+                        <identifiesControllerService>org.apache.nifi.kerberos.KerberosCredentialsService</identifiesControllerService>
+                        <name>kerberos-credentials-service</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Kerberos Principal</key>
+                    <value>
+                        <name>Kerberos Principal</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Kerberos Keytab</key>
+                    <value>
+                        <name>Kerberos Keytab</name>
+                    </value>
+                </entry>
+            </descriptors>
+            <name>Hive3ConnectionPool</name>
+            <persistsState>false</persistsState>
+            <properties>
+                <entry>
+                    <key>hive-db-connect-url</key>
+                    <value>jdbc:hive2://ldl1-dataeng-master0.ldl1-az.a465-9q4k.cloudera.site/;ssl=true;transportMode=http;httpPath=ldl1-dataeng/cdp-proxy-api/hive;sslTrustStore=/usr/lib/jvm/jre/lib/security/cacerts;trustStorePassword=changeit</value>
+                </entry>
+                <entry>
+                    <key>hive-config-resources</key>
+                    <value>/tmp/cdp_public/hive-site.xml</value>
+                </entry>
+                <entry>
+                    <key>hive-db-user</key>
+                    <value>dmathews</value>
+                </entry>
+                <entry>
+                    <key>hive-db-password</key>
+                </entry>
+                <entry>
+                    <key>hive-max-wait-time</key>
+                </entry>
+                <entry>
+                    <key>hive-max-total-connections</key>
+                </entry>
+                <entry>
+                    <key>Validation-query</key>
+                </entry>
+                <entry>
+                    <key>kerberos-credentials-service</key>
+                </entry>
+                <entry>
+                    <key>Kerberos Principal</key>
+                </entry>
+                <entry>
+                    <key>Kerberos Keytab</key>
+                </entry>
+            </properties>
+            <state>ENABLED</state>
+            <type>org.apache.nifi.dbcp.hive.Hive3ConnectionPool</type>
+        </controllerServices>
         <funnels>
-            <id>9a5701fb-82e5-3b4e-0000-000000000000</id>
+            <id>4f2bd8dc-d9c7-3d07-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>165.4310985407285</x>
-                <y>1611.5727246885344</y>
+                <x>0.0</x>
+                <y>1783.0657670185756</y>
+            </position>
+        </funnels>
+        <funnels>
+            <id>a07754d0-9821-3908-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <position>
+                <x>476.30215607271134</x>
+                <y>1779.0519423173243</y>
             </position>
         </funnels>
         <labels>
             <id>1c349e00-e914-3dc8-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>0.0</x>
+                <x>46.185483819044975</x>
                 <y>715.7284111991312</y>
             </position>
             <height>64.20708465576172</height>
@@ -261,7 +431,7 @@ so for now, only execution code will be
             <id>a641aa04-7d45-3c8a-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>778.8213217538419</x>
+                <x>825.0068055728868</x>
                 <y>1062.2426193232552</y>
             </position>
             <height>28.552892684936523</height>
@@ -278,7 +448,7 @@ so for now, only execution code will be
             <id>023c5d2c-f4a5-3d57-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>336.8502753418952</x>
+                <x>383.0357591609402</x>
                 <y>692.31110449332</y>
             </position>
             <bundle>
@@ -346,7 +516,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -354,7 +524,7 @@ so for now, only execution code will be
             <id>03374573-a857-37f2-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>586.065806024807</x>
+                <x>632.251289843852</x>
                 <y>1112.381330551096</y>
             </position>
             <bundle>
@@ -422,7 +592,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -430,7 +600,7 @@ so for now, only execution code will be
             <id>0fecae58-a198-382f-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>328.671706913608</x>
+                <x>374.85719073265295</x>
                 <y>240.99773600440898</y>
             </position>
             <bundle>
@@ -528,7 +698,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -536,7 +706,7 @@ so for now, only execution code will be
             <id>204cf29a-8972-3c19-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>15.9627602990181</x>
+                <x>62.148244118063076</x>
                 <y>1321.064696228055</y>
             </position>
             <bundle>
@@ -622,7 +792,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>splits</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.SplitText</type>
         </processors>
@@ -630,7 +800,7 @@ so for now, only execution code will be
             <id>22ba0944-f05e-3ddf-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>19.831212028201207</x>
+                <x>66.01669584724618</x>
                 <y>1100.2524935084887</y>
             </position>
             <bundle>
@@ -737,7 +907,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
         </processors>
@@ -745,7 +915,7 @@ so for now, only execution code will be
             <id>2cde6220-a8ad-3ba6-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>328.3951279353123</x>
+                <x>374.5806117543573</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -942,15 +1112,112 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ListFile</type>
+        </processors>
+        <processors>
+            <id>4bfcb92f-1486-362b-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <position>
+                <x>57.530834261455084</x>
+                <y>1544.9145806897666</y>
+            </position>
+            <bundle>
+                <artifact>nifi-hive-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0.3.3.1.0-10</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Hive Database Connection Pooling Service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.dbcp.hive.HiveDBCPService</identifiesControllerService>
+                            <name>Hive Database Connection Pooling Service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>hive-batch-size</key>
+                        <value>
+                            <name>hive-batch-size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>hive-charset</key>
+                        <value>
+                            <name>hive-charset</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>statement-delimiter</key>
+                        <value>
+                            <name>statement-delimiter</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>
+                            <name>rollback-on-failure</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Hive Database Connection Pooling Service</key>
+                        <value>5364b729-9347-3437-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>hive-batch-size</key>
+                        <value>100</value>
+                    </entry>
+                    <entry>
+                        <key>hive-charset</key>
+                        <value>UTF-8</value>
+                    </entry>
+                    <entry>
+                        <key>statement-delimiter</key>
+                        <value>;</value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>false</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>PutHiveQL</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>retry</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.hive.PutHiveQL</type>
         </processors>
         <processors>
             <id>8494b873-005f-33d9-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>342.0574628316872</x>
+                <x>388.24294665073216</x>
                 <y>890.6567872415593</y>
             </position>
             <bundle>
@@ -1004,7 +1271,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>unmatched</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
         </processors>
@@ -1012,7 +1279,7 @@ so for now, only execution code will be
             <id>b41c46dd-d05f-3ce1-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>590.5228897455513</x>
+                <x>636.7083735645963</x>
                 <y>1359.7323283737883</y>
             </position>
             <bundle>
@@ -1122,7 +1389,7 @@ so for now, only execution code will be
                 <autoTerminate>true</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.PutFile</type>
         </processors>
@@ -1130,7 +1397,7 @@ so for now, only execution code will be
             <id>e8752c00-55fa-3568-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>332.85190294616996</x>
+                <x>379.03738676521493</x>
                 <y>469.0755359012194</y>
             </position>
             <bundle>
@@ -1237,10 +1504,10 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
         </processors>
     </snippet>
-    <timestamp>11/15/2021 00:00:51 UTC</timestamp>
+    <timestamp>11/15/2021 05:24:56 UTC</timestamp>
 </template>

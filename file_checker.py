@@ -47,7 +47,7 @@ else:
 
 db_tables = []
 for database in dbs:
-    db_tables.append([ "{}.{}".format(database, x) for x in tables ])
+    db_tables.append([ "msck repair table {}.{}".format(database, x) for x in tables ])
 db_tables = [x for y in db_tables for x in y]
 
 print("\n".join(db_tables))

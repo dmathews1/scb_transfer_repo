@@ -27,7 +27,7 @@ dbs = [ x for x in args.database.split(",") if x ]
 
 ## grab tables
 table_path = "{}/{}/{}/configs".format(args.base_path, args.source_system, args.country)
-tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith(".xml") and not x.endswith("_params.xml") ]
+tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith(".xml") and not x.endswith("_param.xml") ]
 tables = [ "_".join(x.split("_")[:-2]) for x in tableslist]
 tables = [ x for x in tables if x ]
 

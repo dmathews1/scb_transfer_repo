@@ -2,8 +2,59 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>2085f647-017d-1000-ffff-fffff1dbeec7</groupId>
-    <name>SCB_Base_with_Hive</name>
+    <name>SCB_Base_v2</name>
     <snippet>
+        <connections>
+            <id>0989a5ed-7e03-3017-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>0d656763-a888-3d6c-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>3a8384df-d9a7-303f-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>1ebb1cfa-7fc4-3076-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>b060d2bf-a524-3b0c-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <selectedRelationships>unmatched</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>0d656763-a888-3d6c-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
         <connections>
             <id>235cb74d-e03f-358c-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
@@ -81,6 +132,33 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
+            <id>4aa5c620-1805-3227-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>3372e9ff-3950-38f5-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <selectedRelationships>not.found</selectedRelationships>
+            <selectedRelationships>permission.denied</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>3a8384df-d9a7-303f-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
             <id>507f7a1a-933d-3632-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -106,13 +184,13 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>5571a9a0-ef9d-3c83-0000-000000000000</id>
+            <id>5bb7e807-66fd-3432-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
-                <id>e8752c00-55fa-3568-0000-000000000000</id>
+                <id>3a8384df-d9a7-303f-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -280,6 +358,31 @@
             </source>
             <zIndex>0</zIndex>
         </connections>
+        <connections>
+            <id>fc33e128-53fc-38a2-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>e8752c00-55fa-3568-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>matched</selectedRelationships>
+            <source>
+                <groupId>8414dd68-5e91-3e41-0000-000000000000</groupId>
+                <id>0d656763-a888-3d6c-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
         <controllerServices>
             <id>5364b729-9347-3437-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
@@ -393,11 +496,19 @@
             <type>org.apache.nifi.dbcp.hive.Hive3ConnectionPool</type>
         </controllerServices>
         <funnels>
+            <id>3372e9ff-3950-38f5-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <position>
+                <x>1555.5429328811558</x>
+                <y>260.766125457536</y>
+            </position>
+        </funnels>
+        <funnels>
             <id>4f2bd8dc-d9c7-3d07-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
-                <y>1783.0657670185756</y>
+                <y>1763.8529069111537</y>
             </position>
         </funnels>
         <funnels>
@@ -405,51 +516,23 @@
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>476.30215607271134</x>
-                <y>1779.0519423173243</y>
+                <y>1759.8390822099025</y>
             </position>
         </funnels>
-        <labels>
-            <id>1c349e00-e914-3dc8-0000-000000000000</id>
+        <funnels>
+            <id>b060d2bf-a524-3b0c-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>46.185483819044975</x>
-                <y>715.7284111991312</y>
+                <x>1113.6723762519443</x>
+                <y>692.9370923159438</y>
             </position>
-            <height>64.20708465576172</height>
-            <label>stand-in for the spark job, need to test from here 
-so for now, only execution code will be
- utilised as the script output is pending</label>
-            <style>
-                <entry>
-                    <key>font-size</key>
-                    <value>12px</value>
-                </entry>
-            </style>
-            <width>303.75872802734375</width>
-        </labels>
-        <labels>
-            <id>a641aa04-7d45-3c8a-0000-000000000000</id>
-            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
-            <position>
-                <x>825.0068055728868</x>
-                <y>1062.2426193232552</y>
-            </position>
-            <height>28.552892684936523</height>
-            <label>if the spark execution fails, we'll create a log file</label>
-            <style>
-                <entry>
-                    <key>font-size</key>
-                    <value>12px</value>
-                </entry>
-            </style>
-            <width>287.0458068847656</width>
-        </labels>
+        </funnels>
         <processors>
             <id>023c5d2c-f4a5-3d57-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>383.0357591609402</x>
-                <y>692.31110449332</y>
+                <y>673.0982443858982</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -516,7 +599,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -525,7 +608,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>632.251289843852</x>
-                <y>1112.381330551096</y>
+                <y>1093.168470443674</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -592,16 +675,162 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+        </processors>
+        <processors>
+            <id>0d656763-a888-3d6c-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <position>
+                <x>959.5563148794165</x>
+                <y>470.92411169292785</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0.3.3.1.0-10</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Destination</key>
+                        <value>
+                            <name>Destination</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Return Type</key>
+                        <value>
+                            <name>Return Type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Validate DTD</key>
+                        <value>
+                            <name>Validate DTD</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>country_xml</key>
+                        <value>
+                            <name>country_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>hdfs_parent_dir_xml</key>
+                        <value>
+                            <name>hdfs_parent_dir_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>kerberos_keytab_xml</key>
+                        <value>
+                            <name>kerberos_keytab_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>kerberos_principal_xml</key>
+                        <value>
+                            <name>kerberos_principal_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>nfs_location_xml</key>
+                        <value>
+                            <name>nfs_location_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>sourcesystem_xml</key>
+                        <value>
+                            <name>sourcesystem_xml</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>status_file_location_xml</key>
+                        <value>
+                            <name>status_file_location_xml</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Destination</key>
+                        <value>flowfile-attribute</value>
+                    </entry>
+                    <entry>
+                        <key>Return Type</key>
+                        <value>auto-detect</value>
+                    </entry>
+                    <entry>
+                        <key>Validate DTD</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>country_xml</key>
+                        <value>*/*[2]/value</value>
+                    </entry>
+                    <entry>
+                        <key>hdfs_parent_dir_xml</key>
+                        <value>*/*[7]/value</value>
+                    </entry>
+                    <entry>
+                        <key>kerberos_keytab_xml</key>
+                        <value>*/*[3]/value</value>
+                    </entry>
+                    <entry>
+                        <key>kerberos_principal_xml</key>
+                        <value>*/*[4]/value</value>
+                    </entry>
+                    <entry>
+                        <key>nfs_location_xml</key>
+                        <value>*/*[5]/value</value>
+                    </entry>
+                    <entry>
+                        <key>sourcesystem_xml</key>
+                        <value>*/*[1]/value</value>
+                    </entry>
+                    <entry>
+                        <key>status_file_location_xml</key>
+                        <value>*/*[11]/value</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>EvaluateXPath</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>matched</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>unmatched</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.EvaluateXPath</type>
         </processors>
         <processors>
             <id>0fecae58-a198-382f-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>374.85719073265295</x>
-                <y>240.99773600440898</y>
+                <y>221.7848758969871</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -698,7 +927,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -707,7 +936,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>62.148244118063076</x>
-                <y>1321.064696228055</y>
+                <y>1301.8518361206332</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -792,7 +1021,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>splits</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.SplitText</type>
         </processors>
@@ -801,7 +1030,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>66.01669584724618</x>
-                <y>1100.2524935084887</y>
+                <y>1081.0396334010668</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -862,11 +1091,11 @@ so for now, only execution code will be
                 <properties>
                     <entry>
                         <key>Command Arguments</key>
-                        <value>-p;${"base_path"};-s;${"source_system"};-c;${"country"};-d;${"databases"}</value>
+                        <value>-p;${"nfs_location_xml"};-f;${"status_file_location_xml"};-s;${"sourcesystem_xml"};-c;${"country_xml"};-d;${"databases"};--remote</value>
                     </entry>
                     <entry>
                         <key>Command Path</key>
-                        <value>/tmp/file_checker.py</value>
+                        <value>/tmp/hdfs_file_checker.py</value>
                     </entry>
                     <entry>
                         <key>Ignore STDIN</key>
@@ -907,7 +1136,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
         </processors>
@@ -915,7 +1144,7 @@ so for now, only execution code will be
             <id>2cde6220-a8ad-3ba6-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
-                <x>374.5806117543573</x>
+                <x>369.7773890981073</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -1054,7 +1283,7 @@ so for now, only execution code will be
                     </entry>
                     <entry>
                         <key>File Filter</key>
-                        <value>.*\.ack</value>
+                        <value>.*_integrated_recon_completion_.*\.ack</value>
                     </entry>
                     <entry>
                         <key>Path Filter</key>
@@ -1112,16 +1341,125 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ListFile</type>
+        </processors>
+        <processors>
+            <id>3a8384df-d9a7-303f-0000-000000000000</id>
+            <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
+            <position>
+                <x>954.1680614287118</x>
+                <y>225.2009352265224</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.8.0.3.3.1.0-10</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>File to Fetch</key>
+                        <value>
+                            <name>File to Fetch</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Completion Strategy</key>
+                        <value>
+                            <name>Completion Strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Move Destination Directory</key>
+                        <value>
+                            <name>Move Destination Directory</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Move Conflict Strategy</key>
+                        <value>
+                            <name>Move Conflict Strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log level when file not found</key>
+                        <value>
+                            <name>Log level when file not found</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Log level when permission denied</key>
+                        <value>
+                            <name>Log level when permission denied</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>File to Fetch</key>
+                        <value>${"base_path"}/${"source_system"}/${"country"}/configs/${"source_system"}_${"country"}_params.xml</value>
+                    </entry>
+                    <entry>
+                        <key>Completion Strategy</key>
+                        <value>None</value>
+                    </entry>
+                    <entry>
+                        <key>Move Destination Directory</key>
+                    </entry>
+                    <entry>
+                        <key>Move Conflict Strategy</key>
+                        <value>Rename</value>
+                    </entry>
+                    <entry>
+                        <key>Log level when file not found</key>
+                        <value>ERROR</value>
+                    </entry>
+                    <entry>
+                        <key>Log level when permission denied</key>
+                        <value>ERROR</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>FetchFile</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>not.found</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>permission.denied</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.FetchFile</type>
         </processors>
         <processors>
             <id>4bfcb92f-1486-362b-0000-000000000000</id>
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>57.530834261455084</x>
-                <y>1544.9145806897666</y>
+                <y>1525.7017205823447</y>
             </position>
             <bundle>
                 <artifact>nifi-hive-nar</artifact>
@@ -1218,7 +1556,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>388.24294665073216</x>
-                <y>890.6567872415593</y>
+                <y>871.4439271341374</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1271,7 +1609,7 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>unmatched</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
         </processors>
@@ -1280,7 +1618,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>636.7083735645963</x>
-                <y>1359.7323283737883</y>
+                <y>1340.5194682663664</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1389,7 +1727,7 @@ so for now, only execution code will be
                 <autoTerminate>true</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.PutFile</type>
         </processors>
@@ -1398,7 +1736,7 @@ so for now, only execution code will be
             <parentGroupId>8414dd68-5e91-3e41-0000-000000000000</parentGroupId>
             <position>
                 <x>379.03738676521493</x>
-                <y>469.0755359012194</y>
+                <y>449.8626757937975</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1459,7 +1797,7 @@ so for now, only execution code will be
                 <properties>
                     <entry>
                         <key>Command Arguments</key>
-                        <value>${"source_system"};${"country"};${"base_path"};"sri_open,sri_nonopen"</value>
+                        <value>${"kerberos_keytab_xml"};${"kerberos_principal_xml"};${"sourcesystem_xml"};${"country_xml"};${"nfs_location_xml"};"udf";"";"";"false";"";"${"partition"}";"${"partition"}";"abfs:/${hdfs_parent_dir_xml:substringBefore('$')}${"sourcesystem_xml"}/hdata";"SRI_OPEN,SRI_NONOPEN"</value>
                     </entry>
                     <entry>
                         <key>Command Path</key>
@@ -1504,10 +1842,10 @@ so for now, only execution code will be
                 <autoTerminate>false</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
         </processors>
     </snippet>
-    <timestamp>11/15/2021 05:24:56 UTC</timestamp>
+    <timestamp>11/16/2021 00:11:17 UTC</timestamp>
 </template>

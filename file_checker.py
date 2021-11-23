@@ -13,6 +13,7 @@ parser.add_argument('-s','--source_system', dest='source_system', action='store'
 parser.add_argument('-c','--country', dest='country', action='store', default = False)
 parser.add_argument('-d','--database', dest='database', action='store', default = False)
 parser.add_argument('-x','--partition', dest='partition', action='store', default = False)
+parser.add_argument('-t','--tables', dest='tables', action='store', default = False)
 parser.add_argument('-r','--replay', dest='replay', action='store_true', default = False)
 args = parser.parse_args()
 
@@ -27,10 +28,7 @@ files = [ x for x in hdfs_files if re.search(r'_tokenization_success', x) and re
 dbs = [ x for x in args.database.split(",") if x ]
 
 ## grab tables
-table_path = "{}/{}/{}/configs".format(args.base_path, args.source_system, args.country)
-tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith("_table_configs.xml") ]
-tables = [ "_".join(x.split("_")[:-2]) for x in tableslist]
-tables = [ x for x in tables if x ]
+tables = [ x for x in args.tables.split(",") if x ]
 
 if len(tables) < 0:
     print("no tables found")

@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>0cbcf03a-017d-1000-8377-9ec81c77f482</groupId>
-    <name>SCB_Base_Increase_Param</name>
+    <name>SCB_Base_Update_Params</name>
     <snippet>
         <processGroups>
             <id>0ab9d21c-be80-31d9-0000-000000000000</id>
@@ -114,32 +114,6 @@
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>6f667be2-951f-3c9d-0000-000000000000</id>
-                    <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>0ab9d21c-be80-31d9-0000-000000000000</groupId>
-                        <id>fc514084-5d96-325d-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>nonzero status</selectedRelationships>
-                    <selectedRelationships>output stream</selectedRelationships>
-                    <source>
-                        <groupId>0ab9d21c-be80-31d9-0000-000000000000</groupId>
-                        <id>6c3aff65-7525-32d9-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
                     <id>78a8ac4d-7784-3a16-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -165,7 +139,7 @@
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>9fbb07db-4c0d-3c26-0000-000000000000</id>
+                    <id>7e36f434-6401-345c-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
@@ -181,10 +155,11 @@
                     <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
                     <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
                     <name></name>
-                    <selectedRelationships>success</selectedRelationships>
+                    <selectedRelationships>nonzero status</selectedRelationships>
+                    <selectedRelationships>output stream</selectedRelationships>
                     <source>
                         <groupId>0ab9d21c-be80-31d9-0000-000000000000</groupId>
-                        <id>fc514084-5d96-325d-0000-000000000000</id>
+                        <id>6c3aff65-7525-32d9-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
@@ -782,8 +757,8 @@
                     <id>92dd72cc-19d9-337d-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>453.49910378150537</x>
-                        <y>272.69700260583545</y>
+                        <x>455.44502663306787</x>
+                        <y>445.87485905114795</y>
                     </position>
                     <height>97.87371826171875</height>
                     <label>Other hardcoded attributes can be declared here --&gt;
@@ -808,8 +783,8 @@ Please do not modify the following attributes in the processor
                     <id>e38d84a8-96b3-3320-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>780.9881960076777</x>
-                        <y>22.26422143507466</y>
+                        <x>782.9341188592402</x>
+                        <y>195.44207788038716</y>
                     </position>
                     <height>29.882923126220703</height>
                     <label>The input directory of the ListFile processor currently must be hardcoded</label>
@@ -825,8 +800,8 @@ Please do not modify the following attributes in the processor
                     <id>13cc6b6e-38c9-3eb3-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1459.100861147735</x>
-                        <y>510.08170270067467</y>
+                        <x>1461.0467839992975</x>
+                        <y>683.2595591459872</y>
                     </position>
                     <comments></comments>
                     <contents>
@@ -1103,7 +1078,7 @@ Please do not modify the following attributes in the processor
 <yieldDuration>1 sec</yieldDuration>
                             </config>
                             <executionNodeRestricted>false</executionNodeRestricted>
-                            <name>QueryRecord</name>
+                            <name>QueryRecord - ConvertParamsFile</name>
                             <relationships>
 <autoTerminate>false</autoTerminate>
 <name>failure</name>
@@ -1269,7 +1244,7 @@ Please do not modify the following attributes in the processor
 <yieldDuration>1 sec</yieldDuration>
                             </config>
                             <executionNodeRestricted>false</executionNodeRestricted>
-                            <name>EvaluateJsonPath</name>
+                            <name>EvaluateJsonPath - TargetVariableExtraction</name>
                             <relationships>
 <autoTerminate>false</autoTerminate>
 <name>failure</name>
@@ -1423,7 +1398,7 @@ Please do not modify the following attributes in the processor
 <yieldDuration>1 sec</yieldDuration>
                             </config>
                             <executionNodeRestricted>false</executionNodeRestricted>
-                            <name>UpdateAttribute</name>
+                            <name>UpdateAttribute - StringConversion</name>
                             <relationships>
 <autoTerminate>false</autoTerminate>
 <name>success</name>
@@ -1433,7 +1408,7 @@ Please do not modify the following attributes in the processor
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
                     </contents>
-                    <name>Copy of XMLParser</name>
+                    <name>XMLParser</name>
                     <variables/>
                 </processGroups>
                 <processGroups>
@@ -2722,8 +2697,8 @@ directory to desired location</label>
                     <id>27d8a928-3375-3c9f-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1469.9500396166427</x>
-                        <y>274.4739093811084</y>
+                        <x>1471.8959624682052</x>
+                        <y>447.6517658264209</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -2732,7 +2707,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>This will grab the XML file that corresponds to the source system and country pulled from the previous processor.</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -2806,7 +2781,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>FetchFile</name>
+                    <name>FetchFile - Params File</name>
                     <relationships>
                         <autoTerminate>true</autoTerminate>
                         <name>failure</name>
@@ -2841,7 +2816,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>This process runs a “msck repair table” for a given table in the Public Cloud environment, this is to enable the Public Cloud table to recognise the new partition saved from the Spark tokenisation script</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -2917,7 +2892,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>PutHive3QL</name>
+                    <name>PutHive3QL - PublicCloud</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>failure</name>
@@ -2948,7 +2923,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>Split the incoming Hive commands from the Python script so that only one given table can be updated per flowfile, this is to allow some tables to fail, and some to succeed as opposed to all failing should something be wrong with the single Hive command.</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3011,7 +2986,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>SplitText</name>
+                    <name>SplitText - HiveDDLStatements</name>
                     <relationships>
                         <autoTerminate>true</autoTerminate>
                         <name>failure</name>
@@ -3032,8 +3007,8 @@ directory to desired location</label>
                     <id>3b434d42-7ec1-3d03-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>827.7773848641632</x>
-                        <y>70.99999441825787</y>
+                        <x>829.7233077157257</x>
+                        <y>244.17785086357037</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -3042,7 +3017,9 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>The ListFile processor is the first in the NiFi flow, it will pick up any files in a source system and country’s archival folder. The file will need to be structured as followed to be picked up:
+
+sourcesystem_country_integrated_recon_completion_yyyy-MM-dd.ack</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3247,7 +3224,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>This processor runs a Python script which checks for any failed tables. If it detects any, then those tables are removed from the list of successful tables that will run on the next processors to update the Public Cloud tables.</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3331,7 +3308,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>ExecuteStreamCommand</name>
+                    <name>ExecuteStreamCommand - PythonFileChecker</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>nonzero status</name>
@@ -3352,8 +3329,8 @@ directory to desired location</label>
                     <id>6c3aff65-7525-32d9-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>840.2832756342809</x>
-                        <y>537.3114019872535</y>
+                        <x>842.2291984858434</x>
+                        <y>710.489258432566</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -3362,7 +3339,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>This is the processor that calls the Spark tokenisation script to tokenise the required columns of a table, and save the result into the ADLS Gen2 storage underpinning the Public Cloud Data Hub cluster. All fields to start the job are extracted from the parameter file from the previous process group, the target partition for this job is extracted from the original acknowledgement file that triggered the flow to initially start (from the ListFile processor).</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3446,7 +3423,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>ExecuteStreamCommand</name>
+                    <name>ExecuteStreamCommand - SparkTokenisation</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>nonzero status</name>
@@ -3467,8 +3444,8 @@ directory to desired location</label>
                     <id>8dd4bf14-42ae-3f07-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>829.790091320469</x>
-                        <y>265.0431724029431</y>
+                        <x>831.7360141720314</x>
+                        <y>438.2210288482556</y>
                     </position>
                     <bundle>
                         <artifact>nifi-update-attribute-nar</artifact>
@@ -3477,7 +3454,9 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>This processor will grab the source system and country from the file name, as well as the target partition date. The source system and country variables are used to determine the config file to read in down the flow to get all the required attributes of a given source system and country. 
+
+Additionally, any hardcoded values that are needed throughout the flow, such as the abfs prefix, can be added in here too</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3580,7 +3559,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>UpdateAttribute</name>
+                    <name>UpdateAttribute - BaseVariableDeclaration</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
@@ -3603,7 +3582,7 @@ directory to desired location</label>
                     </bundle>
                     <config>
                         <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
+                        <comments>Routing to two separate streams, if the Spark tokenisation script is successful, it will route to the success flow, otherwise it will route to the failure flow.</comments>
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
@@ -3638,7 +3617,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>RouteOnAttribute</name>
+                    <name>RouteOnSuccessOrFailure</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>matched</name>
@@ -3718,7 +3697,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>UpdateAttribute</name>
+                    <name>UpdateAttribute - FailedTokenisation</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
@@ -3832,7 +3811,7 @@ directory to desired location</label>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>PutFile</name>
+                    <name>PutFile - FailedSparkScriptLogFile</name>
                     <relationships>
                         <autoTerminate>true</autoTerminate>
                         <name>failure</name>
@@ -3845,86 +3824,10 @@ directory to desired location</label>
                     <style/>
                     <type>org.apache.nifi.processors.standard.PutFile</type>
                 </processors>
-                <processors>
-                    <id>fc514084-5d96-325d-0000-000000000000</id>
-                    <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>837.3412969191836</x>
-                        <y>742.8667324564998</y>
-                    </position>
-                    <bundle>
-                        <artifact>nifi-update-attribute-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.8.0.3.3.1.0-10</version>
-                    </bundle>
-                    <config>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>Delete Attributes Expression</key>
-<value>
-    <name>Delete Attributes Expression</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Store State</key>
-<value>
-    <name>Store State</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Stateful Variables Initial Value</key>
-<value>
-    <name>Stateful Variables Initial Value</name>
-</value>
-                            </entry>
-                            <entry>
-<key>databases</key>
-<value>
-    <name>databases</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>Delete Attributes Expression</key>
-                            </entry>
-                            <entry>
-<key>Store State</key>
-<value>Do not store state</value>
-                            </entry>
-                            <entry>
-<key>Stateful Variables Initial Value</key>
-                            </entry>
-                            <entry>
-<key>databases</key>
-<value>${execution.command.args:substringAfterLast(';')}</value>
-                            </entry>
-                        </properties>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>0 sec</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>UpdateAttribute</name>
-                    <relationships>
-                        <autoTerminate>false</autoTerminate>
-                        <name>success</name>
-                    </relationships>
-                    <state>STOPPED</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
-                </processors>
             </contents>
             <name>CDP_DATA_CP</name>
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>11/23/2021 22:20:12 UTC</timestamp>
+    <timestamp>11/23/2021 23:04:32 UTC</timestamp>
 </template>

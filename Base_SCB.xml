@@ -3778,7 +3778,7 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
                         <properties>
                             <entry>
 <key>Directory</key>
-<value>${"base_path"}/${"sourcesystem_xml"}/${"country_xml"}/nifi_status/</value>
+<value>${"base_path"}/${"sourcesystem_xml"}/${"country_xml"}/nifi/</value>
                             </entry>
                             <entry>
 <key>Conflict Resolution Strategy</key>

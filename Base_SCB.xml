@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>0cbcf03a-017d-1000-8377-9ec81c77f482</groupId>
-    <name>SCB_Base_Update_Params</name>
+    <name>SCB_Base_Template</name>
     <snippet>
         <processGroups>
             <id>0ab9d21c-be80-31d9-0000-000000000000</id>
@@ -981,7 +981,7 @@ Please do not modify the following attributes in the processor
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>UpdateAttribute</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>INPUT_PORT</type>
                         </inputPorts>
                         <outputPorts>
@@ -994,7 +994,7 @@ Please do not modify the following attributes in the processor
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>ExecuteStreamCommand</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>OUTPUT_PORT</type>
                         </outputPorts>
                         <processors>
@@ -1091,7 +1091,7 @@ Please do not modify the following attributes in the processor
 <autoTerminate>false</autoTerminate>
 <name>test</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.QueryRecord</type>
                         </processors>
@@ -1100,7 +1100,7 @@ Please do not modify the following attributes in the processor
                             <parentGroupId>13cc6b6e-38c9-3eb3-0000-000000000000</parentGroupId>
                             <position>
 <x>2536.1883913732527</x>
-<y>545.3768664540326</y>
+<y>543.2025500477826</y>
                             </position>
                             <bundle>
 <artifact>nifi-standard-nar</artifact>
@@ -1257,7 +1257,7 @@ Please do not modify the following attributes in the processor
 <autoTerminate>false</autoTerminate>
 <name>unmatched</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                         </processors>
@@ -1403,7 +1403,7 @@ Please do not modify the following attributes in the processor
 <autoTerminate>false</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
@@ -1529,7 +1529,7 @@ Please do not modify the following attributes in the processor
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>success</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>INPUT_PORT</type>
                         </inputPorts>
                         <labels>
@@ -1660,7 +1660,7 @@ directory to desired location</label>
 <autoTerminate>true</autoTerminate>
 <name>output stream</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
                         </processors>
@@ -1778,7 +1778,7 @@ directory to desired location</label>
 <autoTerminate>true</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.PutFile</type>
                         </processors>
@@ -1864,7 +1864,7 @@ directory to desired location</label>
 <autoTerminate>false</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
@@ -2056,7 +2056,7 @@ directory to desired location</label>
 <autoTerminate>true</autoTerminate>
 <name>unmatched</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.ExtractText</type>
                         </processors>
@@ -2182,7 +2182,7 @@ directory to desired location</label>
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>Failure</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>INPUT_PORT</type>
                         </inputPorts>
                         <labels>
@@ -2317,7 +2317,7 @@ directory to desired location</label>
 <autoTerminate>true</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.PutFile</type>
                         </processors>
@@ -2407,7 +2407,7 @@ directory to desired location</label>
 <autoTerminate>false</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
                         </processors>
@@ -2599,7 +2599,7 @@ directory to desired location</label>
 <autoTerminate>true</autoTerminate>
 <name>unmatched</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.ExtractText</type>
                         </processors>
@@ -2685,7 +2685,7 @@ directory to desired location</label>
 <autoTerminate>false</autoTerminate>
 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
@@ -2798,7 +2798,7 @@ directory to desired location</label>
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.FetchFile</type>
                 </processors>
@@ -2806,7 +2806,7 @@ directory to desired location</label>
                     <id>2c34392b-dc35-3651-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>524.4518010321742</x>
+                        <x>519.9190861884242</x>
                         <y>1598.5980571808695</y>
                     </position>
                     <bundle>
@@ -2905,7 +2905,7 @@ directory to desired location</label>
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.hive.PutHive3QL</type>
                 </processors>
@@ -2999,7 +2999,7 @@ directory to desired location</label>
                         <autoTerminate>false</autoTerminate>
                         <name>splits</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.SplitText</type>
                 </processors>
@@ -3214,7 +3214,7 @@ sourcesystem_country_integrated_recon_completion_yyyy-MM-dd.ack</comments>
                     <id>4d756ea4-b5ca-3f29-0000-000000000000</id>
                     <parentGroupId>0ab9d21c-be80-31d9-0000-000000000000</parentGroupId>
                     <position>
-                        <x>524.0166916133021</x>
+                        <x>525.1498703242396</x>
                         <y>1152.0396278193248</y>
                     </position>
                     <bundle>
@@ -3321,7 +3321,7 @@ sourcesystem_country_integrated_recon_completion_yyyy-MM-dd.ack</comments>
                         <autoTerminate>false</autoTerminate>
                         <name>output stream</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
                 </processors>
@@ -3436,7 +3436,7 @@ sourcesystem_country_integrated_recon_completion_yyyy-MM-dd.ack</comments>
                         <autoTerminate>false</autoTerminate>
                         <name>output stream</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
                 </processors>
@@ -3564,7 +3564,7 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                 </processors>
@@ -3626,7 +3626,7 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
                         <autoTerminate>false</autoTerminate>
                         <name>unmatched</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
                 </processors>
@@ -3702,7 +3702,7 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                 </processors>
@@ -3820,7 +3820,7 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
                         <autoTerminate>true</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.PutFile</type>
                 </processors>
@@ -3829,5 +3829,5 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>11/23/2021 23:04:32 UTC</timestamp>
+    <timestamp>11/24/2021 00:21:34 UTC</timestamp>
 </template>

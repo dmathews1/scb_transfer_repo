@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>0cbcf03a-017d-1000-8377-9ec81c77f482</groupId>
-    <name>SCB_Template</name>
+    <name>SCB_Base_with_Recon</name>
     <snippet>
         <processGroups>
             <id>0ab9d21c-be80-31d9-0000-000000000000</id>
@@ -1467,13 +1467,13 @@ Please do not modify the following attributes in the processor
                             <zIndex>0</zIndex>
                         </connections>
                         <connections>
-                            <id>52bc05a9-0bb5-30de-0000-000000000000</id>
+                            <id>58666fce-5fef-30ce-0000-000000000000</id>
                             <parentGroupId>bfbab6c9-e53b-366e-0000-000000000000</parentGroupId>
                             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                             <destination>
 <groupId>bfbab6c9-e53b-366e-0000-000000000000</groupId>
-<id>3f34726e-f5a9-3946-0000-000000000000</id>
+<id>bc4a5618-2af1-3e11-0000-000000000000</id>
 <type>PROCESSOR</type>
                             </destination>
                             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -1492,13 +1492,13 @@ Please do not modify the following attributes in the processor
                             <zIndex>0</zIndex>
                         </connections>
                         <connections>
-                            <id>58666fce-5fef-30ce-0000-000000000000</id>
+                            <id>62a68324-980e-3335-0000-000000000000</id>
                             <parentGroupId>bfbab6c9-e53b-366e-0000-000000000000</parentGroupId>
                             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                             <destination>
 <groupId>bfbab6c9-e53b-366e-0000-000000000000</groupId>
-<id>bc4a5618-2af1-3e11-0000-000000000000</id>
+<id>c1b5f2ad-8fc6-3f9c-0000-000000000000</id>
 <type>PROCESSOR</type>
                             </destination>
                             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -1572,120 +1572,6 @@ directory to desired location</label>
                             </style>
                             <width>190.39614868164062</width>
                         </labels>
-                        <processors>
-                            <id>3f34726e-f5a9-3946-0000-000000000000</id>
-                            <parentGroupId>bfbab6c9-e53b-366e-0000-000000000000</parentGroupId>
-                            <position>
-<x>365.15695672495275</x>
-<y>2890.6819428992085</y>
-                            </position>
-                            <bundle>
-<artifact>nifi-standard-nar</artifact>
-<group>org.apache.nifi</group>
-<version>1.8.0.3.3.1.0-10</version>
-                            </bundle>
-                            <config>
-<bulletinLevel>WARN</bulletinLevel>
-<comments></comments>
-<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-<descriptors>
-    <entry>
-        <key>Command Arguments</key>
-        <value>
-            <name>Command Arguments</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Command Path</key>
-        <value>
-            <name>Command Path</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Ignore STDIN</key>
-        <value>
-            <name>Ignore STDIN</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Working Directory</key>
-        <value>
-            <name>Working Directory</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Argument Delimiter</key>
-        <value>
-            <name>Argument Delimiter</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Output Destination Attribute</key>
-        <value>
-            <name>Output Destination Attribute</name>
-        </value>
-    </entry>
-    <entry>
-        <key>Max Attribute Length</key>
-        <value>
-            <name>Max Attribute Length</name>
-        </value>
-    </entry>
-</descriptors>
-<executionNode>ALL</executionNode>
-<lossTolerant>false</lossTolerant>
-<penaltyDuration>30 sec</penaltyDuration>
-<properties>
-    <entry>
-        <key>Command Arguments</key>
-        <value>"for recon script"</value>
-    </entry>
-    <entry>
-        <key>Command Path</key>
-        <value>/usr/bin/echo</value>
-    </entry>
-    <entry>
-        <key>Ignore STDIN</key>
-        <value>false</value>
-    </entry>
-    <entry>
-        <key>Working Directory</key>
-    </entry>
-    <entry>
-        <key>Argument Delimiter</key>
-        <value>;</value>
-    </entry>
-    <entry>
-        <key>Output Destination Attribute</key>
-    </entry>
-    <entry>
-        <key>Max Attribute Length</key>
-        <value>256</value>
-    </entry>
-</properties>
-<runDurationMillis>0</runDurationMillis>
-<schedulingPeriod>0 sec</schedulingPeriod>
-<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-<yieldDuration>1 sec</yieldDuration>
-                            </config>
-                            <executionNodeRestricted>false</executionNodeRestricted>
-                            <name>ReconScriptStandIn</name>
-                            <relationships>
-<autoTerminate>true</autoTerminate>
-<name>nonzero status</name>
-                            </relationships>
-                            <relationships>
-<autoTerminate>true</autoTerminate>
-<name>original</name>
-                            </relationships>
-                            <relationships>
-<autoTerminate>true</autoTerminate>
-<name>output stream</name>
-                            </relationships>
-                            <state>STOPPED</state>
-                            <style/>
-                            <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
-                        </processors>
                         <processors>
                             <id>bc4a5618-2af1-3e11-0000-000000000000</id>
                             <parentGroupId>bfbab6c9-e53b-366e-0000-000000000000</parentGroupId>
@@ -1803,6 +1689,123 @@ directory to desired location</label>
                             <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.PutFile</type>
+                        </processors>
+                        <processors>
+                            <id>c1b5f2ad-8fc6-3f9c-0000-000000000000</id>
+                            <parentGroupId>bfbab6c9-e53b-366e-0000-000000000000</parentGroupId>
+                            <position>
+<x>342.598144930392</x>
+<y>2898.129833262965</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.8.0.3.3.1.0-10</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Command Arguments</key>
+        <value>
+            <name>Command Arguments</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Command Path</key>
+        <value>
+            <name>Command Path</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Ignore STDIN</key>
+        <value>
+            <name>Ignore STDIN</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Working Directory</key>
+        <value>
+            <name>Working Directory</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Argument Delimiter</key>
+        <value>
+            <name>Argument Delimiter</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Output Destination Attribute</key>
+        <value>
+            <name>Output Destination Attribute</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Max Attribute Length</key>
+        <value>
+            <name>Max Attribute Length</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Command Arguments</key>
+        <value>${"kerberos_keytab_xml"};${"kerberos_principal_xml"};"${hdfs_parent_dir_xml}/${"db_table":substringBefore('.')}/${"db_table":substringAfter('.')}";
+"";"${abfs_prefix}${hdfs_parent_dir_xml}/${"db_table":substringBefore('.')}/${"db_table":substringAfter('.')}";
+${"partition"};"I";"recon_cdp";"inc_tbl_record_cnt_recon"</value>
+    </entry>
+    <entry>
+        <key>Command Path</key>
+        <value>/CTRLFW/SOURCG/SDM/DEV/deployment/1.3.1/scripts/cdp_recon/recon.sh</value>
+    </entry>
+    <entry>
+        <key>Ignore STDIN</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>Working Directory</key>
+        <value>/CTRLFW/SOURCG/SDM/DEV/deployment/1.3.1/scripts</value>
+    </entry>
+    <entry>
+        <key>Argument Delimiter</key>
+        <value>;</value>
+    </entry>
+    <entry>
+        <key>Output Destination Attribute</key>
+    </entry>
+    <entry>
+        <key>Max Attribute Length</key>
+        <value>256</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Recon</name>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>nonzero status</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>original</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>true</autoTerminate>
+<name>output stream</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
                         </processors>
                         <processors>
                             <id>fd4fd267-9270-39bd-0000-000000000000</id>
@@ -3851,5 +3854,5 @@ Additionally, any hardcoded values that are needed throughout the flow, such as 
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>11/28/2021 21:07:41 UTC</timestamp>
+    <timestamp>11/29/2021 02:19:49 UTC</timestamp>
 </template>

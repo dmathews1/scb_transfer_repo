@@ -30,7 +30,7 @@ dbs = [ x for x in args.database.split(",") if x ]
 ## grab tables
 if args.tables == "":
     table_path = "{}/{}/{}/configs".format(args.base_path, args.source_system, args.country)
-    tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith("_table_config.xml") ]
+    tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith("_tables_config.xml") ]
     tables = [ "_".join(x.split("_")[:-2]) for x in tableslist]
     tables = [ x for x in tables if x ]
 else:
@@ -51,7 +51,7 @@ if len(fail_files) > 0:
 
 db_tables = []
 for database in dbs:
-    db_tables.append([ "{}_{}_{}.{}".format(args.source_system,args.country,database.lower(), x) for x in tables ])
+    db_tables.append([ "{}.{}".format(database.lower(), x) for x in tables ])
 db_tables = [x for y in db_tables for x in y]
 db_tables = [ "msck repair table {}".format(x) for x in db_tables if x not in fail_files ]
 

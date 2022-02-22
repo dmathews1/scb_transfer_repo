@@ -27,25 +27,24 @@ def plain_run(base_path, hdfs_path, source_system, country, databases, partition
     print("\n".join(db_tables))
 
 
-def detokenise_run(base_path, hdfs_path, source_system, country, database, partition, tables, mapping):
-    print("SCRIPT UNDERGOING REWORK")
-    exit()
-    base_command = "/usr/hdp/current/hadoop-client/bin/hdfs dfs -ls {}/global/".format(args.hdfs_path)
+def detokenise_run(base_path, hdfs_path, source_system, country, databases, partition, tables, mapping):
+
+    base_command = "/usr/hdp/current/hadoop-client/bin/hdfs dfs -ls {}/global/".format(hdfs_path)
     process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
     hdfs_files = [ x.split()[-1] for x in output.split("\n")[1:-1]]
 
     files = [ x for x in hdfs_files if re.search(r'_tokenization_success', x) and re.search(r'{}'.format(partition), x) ]
-    dbs = [ x for x in args.database.split(",") if x ]
+    dbs = [ x for x in databases.split(",") if x ]
 
     ## grab tables
     if args.tables == "":
-        table_path = "{}/{}/{}/configs".format(args.base_path, args.source_system, args.country)
-        tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(args.source_system), x) and re.search(r'{}'.format(args.country), x) and x.endswith("_tables_config.xml") ]
+        table_path = "{}/{}/{}/configs".format(base_path, source_system, country)
+        tableslist = [ x for x in os.listdir(table_path) if re.search(r'{}'.format(source_system), x) and re.search(r'{}'.format(country), x) and x.endswith("_tables_config.xml") ]
         tables = [ "_".join(x.split("_")[:-2]) for x in tableslist]
         tables = [ x for x in tables if x ]
     else:
-        tables = [ x for x in args.tables.split(",") if x ]
+        tables = [ x for x in tables.split(",") if x ]
 
     if len(tables) < 0:
         print("no tables found")
@@ -65,13 +64,13 @@ def detokenise_run(base_path, hdfs_path, source_system, country, database, parti
         db_tables.append([ "{}.{}".format(database.lower(), x) for x in tables ])
     db_tables = [x for y in db_tables for x in y if x not in fail_files ]
 
-    if args.mapping is not "":
+    if mapping is not "":
         for i in db_tables:
             index = db_tables.index(i)
             for j in mapping:
                 if i.split(".")[0] == j.split(":")[0]:
                     db_tables[index] = (i, j.split(":")[1])
-        db_tables = [ "alter table {} add partition ({} = '{}');".format(x[0], x[1], args.partition) for x in db_tables ]
+        db_tables = [ "alter table {} add partition ({} = '{}');".format(x[0], x[1], partition) for x in db_tables ]
     else:
         db_tables = [ "msck repair table {};".format(x) for x in db_tables ]
 

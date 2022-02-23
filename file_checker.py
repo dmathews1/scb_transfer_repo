@@ -45,7 +45,7 @@ if len(tables) < 0:
 ## check files
 fail_files = [ x for x in hdfs_files if re.search(r'_tokenization_failure_details', x) and re.search(r'{}'.format(partition), x) ]
 if len(fail_files) > 0:
-    base_command = "/usr/hdp/current/hadoop-client/bin/hdfs dfs -cat {}".format(fail_files[0])
+    base_command = "/usr/bin/hdfs dfs -cat {}".format(fail_files[0])
     process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
     fail_files_lines = [ x.split(",") for x in output.split("\n") if x ]

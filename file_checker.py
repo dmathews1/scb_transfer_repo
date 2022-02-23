@@ -21,7 +21,7 @@ partition = args.partition.replace("-","_")
 
 mapping = args.mapping.split(",")
 
-base_command = "/usr/hdp/current/hadoop-client/bin/hdfs dfs -ls {}/global/".format(args.hdfs_path)
+base_command = "/usr/bin/hdfs dfs -ls {}/global/".format(args.hdfs_path)
 process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 hdfs_files = [ x.split()[-1] for x in output.split("\n")[1:-1]]

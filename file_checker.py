@@ -37,19 +37,27 @@ if args.tables == "":
     tables = [ x for x in tables if x ]
 else:
     tables = [ x for x in args.tables.split(",") if x ]
+    if tables[0][-2] == "|": 
+        tables = list(set([ x[:-2] for x in tables ]))
 
 if len(tables) < 0:
     print("no tables found")
     exit(1)
 
 ## check files
-fail_files = [ x for x in hdfs_files if re.search(r'_tokenization_failure_details', x) and re.search(r'{}'.format(partition), x) ]
-if len(fail_files) > 0:
-    base_command = "/usr/bin/hdfs dfs -cat {}".format(fail_files[0])
-    process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-    fail_files_lines = [ x.split(",") for x in output.split("\n") if x ]
-    fail_files = [ "{}.{}".format(x[0].split('(')[1], x[1]) for x in fail_files_lines if re.search(r'\.*Failure*',x[2]) ]
+token_fail_command = "/usr/bin/hdfs dfs -ls {}/{}_{}_tokenization_failure_details_{}/".format(args.source_system, args.country, args.hdfs_path,partition)
+token_fail_process = subprocess.Popen(token_fail_command.split(), stdout=subprocess.PIPE)
+token_fail_output, token_fail_error = process.communicate()
+token_fail_files = [ x.split()[-1] for x in token_fail_output.split("\n")[1:-1]]
+
+fail_files = []
+if len(token_fail_files) > 0:
+    for file in token_fail_files:
+        base_command = "/usr/bin/hdfs dfs -cat {}".format(token_fail_files[0])
+        process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
+        output, error = process.communicate()
+        fail_files_lines = [ x.split(",") for x in output.split("\n") if x ]
+        fail_files.append([ "{}.{}".format(x[0].split('(')[1], x[1]) for x in fail_files_lines if re.search(r'\.*Failure*',x[2]) ][0])
 
 db_tables = []
 for database in dbs:

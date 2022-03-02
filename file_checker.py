@@ -15,7 +15,14 @@ parser.add_argument('-d','--database', dest='database', action='store', default 
 parser.add_argument('-x','--partition', dest='partition', action='store', default = False)
 parser.add_argument('-t','--tables', dest='tables', action='store', default = "")
 parser.add_argument('-m','--mapping', dest='mapping', action='store', default = "")
+parser.add_argument('-u','--user_principal', dest='user_principal', action='store', default = None)
+parser.add_argument('-k','--keytab', dest='keytab', action='store', default = None)
 args = parser.parse_args()
+
+os.environ["KRB5CCNAME"] = "FILE:/tmp/krb5cc_{}".format(os.getuid())
+base_command = "kinit -kt {} {}".format(args.keytab, args.user_principal)
+process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
 
 partition = args.partition.replace("-","_")
 
@@ -38,7 +45,7 @@ if args.tables == "":
 else:
     tables = [ x for x in args.tables.split(",") if x ]
     if tables[0][-2] == "|": 
-        tables = list(set([ x[:-2] for x in tables ]))
+        tables = list(set([ x[:-2] for x in tables if x[-1] = "t" ))
 
 if len(tables) < 0:
     print("no tables found")

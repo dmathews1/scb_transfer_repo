@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import os
 import argparse
@@ -17,7 +17,7 @@ parser.add_argument('-k','--keytab', dest='keytab', action='store', default = No
 parser.add_argument('-f','--function', dest='function', action='store', default = None)
 args = parser.parse_args()
 
-os.environ["KRB5CCNAME"] = "FILE:/tmp/krb5cc_%{uid}"
+os.environ["KRB5CCNAME"] = "FILE:/tmp/krb5cc_{}".format(os.getuid())
 base_command = "kinit -kt {} {}".format(args.keytab, args.user_principal)
 process = subprocess.Popen(base_command.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()

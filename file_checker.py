@@ -7,7 +7,7 @@ from sys import exit
 import subprocess
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-p','--path',dest='base_path', action='store', default = None)
+parser.add_argument('-p','--path',dest='base_path', action='store', default = None) ## only used if table mapping not provided
 parser.add_argument('-f','--hdfs_path',dest='hdfs_path', action='store', default = None)
 parser.add_argument('-s','--source_system', dest='source_system', action='store', default = False)
 parser.add_argument('-c','--country', dest='country', action='store', default = False)
@@ -45,7 +45,7 @@ if len(tables) < 0:
     exit(1)
 
 ## check files
-token_fail_command = "/usr/bin/hdfs dfs -ls {}/{}_{}_tokenization_failure_details_{}/".format(args.source_system, args.country, args.hdfs_path,partition)
+token_fail_command = "/usr/bin/hdfs dfs -ls {}/{}_{}_tokenization_failure_details_{}/".format(args.hdfs_path, args.source_system, args.country, partition)
 token_fail_process = subprocess.Popen(token_fail_command.split(), stdout=subprocess.PIPE)
 token_fail_output, token_fail_error = process.communicate()
 token_fail_files = [ x.split()[-1] for x in token_fail_output.split("\n")[1:-1]]

@@ -45,7 +45,7 @@ if args.tables == "":
 else:
     tables = [ x for x in args.tables.split(",") if x ]
     if tables[0][-2] == "|": 
-        tables = list(set([ x[:-2] for x in tables if x[-1] = "t" ))
+        tables = list(set([ x[:-2] for x in tables if x[-1] == "t" ]))
 
 if len(tables) < 0:
     print("no tables found")
@@ -54,7 +54,7 @@ if len(tables) < 0:
 ## check files
 token_fail_command = "/usr/bin/hdfs dfs -ls {}/{}_{}_tokenization_failure_details_{}/".format(args.hdfs_path, args.source_system, args.country, partition)
 token_fail_process = subprocess.Popen(token_fail_command.split(), stdout=subprocess.PIPE)
-token_fail_output, token_fail_error = process.communicate()
+token_fail_output, token_fail_error = token_fail_process.communicate()
 token_fail_files = [ x.split()[-1] for x in token_fail_output.split("\n")[1:-1]]
 
 fail_files = []
@@ -70,8 +70,9 @@ db_tables = []
 for database in dbs:
     db_tables.append([ "{}.{}".format(database.lower(), x) for x in tables ])
 db_tables = [x for y in db_tables for x in y if x not in fail_files ]
+db_tables = [ "{}_{}_{}".format(args.source_system, args.country, x) for x in db_tables  ]
 
-if args.mapping is not "":
+if mapping is not "":
     for i in db_tables:
         index = db_tables.index(i)
         for j in mapping:

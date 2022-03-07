@@ -78,7 +78,7 @@ if mapping is not "":
         for j in mapping:
             if i.split(".")[0] == j.split(":")[0]:
                 db_tables[index] = (i, j.split(":")[1])
-    db_tables = [ "alter table {} add partition ({} = '{}');".format(x[0], x[1], args.partition) for x in db_tables ]
+    db_tables = [ "alter table {} add if not exists partition ({} = '{}');".format(x[0], x[1], args.partition) for x in db_tables ]
 else:
     db_tables = [ "msck repair table {};".format(x) for x in db_tables ]
 
